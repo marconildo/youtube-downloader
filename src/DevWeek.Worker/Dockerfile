@@ -1,6 +1,6 @@
 FROM microsoft/dotnet:2.2-aspnetcore-runtime-stretch-slim  AS base
 WORKDIR /app
-RUN apt-get update && apt-get install libav-tools python2.7-minimal -y && cp /usr/bin/python2.7 /usr/bin/python
+RUN apt-get update && apt-get install libav-tools python2.7-minimal ca-certificates -y && cp /usr/bin/python2.7 /usr/bin/python
 RUN curl -L https://yt-dl.org/downloads/latest/youtube-dl -o /usr/local/bin/youtube-dl && chmod a+rx /usr/local/bin/youtube-dl
 
 
